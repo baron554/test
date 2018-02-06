@@ -96,11 +96,10 @@ export function provideSettings(storage: Storage) {
     Camera,
     SplashScreen,
     StatusBar,
-    IonicErrorHandler,
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
-    // { provide: ErrorHandler, useClass: IonicErrorHandler },
-    { provide: ErrorHandler, useClass: MyErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    [{ provide: ErrorHandler, useClass: MyErrorHandler }] // This line
   ]
 })
 export class AppModule { }

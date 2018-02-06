@@ -14,6 +14,12 @@ import { Settings } from '../providers/providers';
 import { User } from '../providers/providers';
 import { Api } from '../providers/providers';
 import { MyApp } from './app.component';
+//error tracker
+import { Pro } from '@ionic/pro';
+
+const IonicPro = Pro.init('8152c79d', {
+  appVersion: "0.0.1"
+}); //end of error tracker
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
